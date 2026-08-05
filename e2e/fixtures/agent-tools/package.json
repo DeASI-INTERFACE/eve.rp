@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@eve-e2e/dynamic-import-dependency": "file:./fixtures/dynamic-import-dependency",
-    "@opentelemetry/core": "2.6.1",
+    "@opentelemetry/core": "2.8.0",
     "@opentelemetry/sdk-trace-base": "2.6.1",
     "@vercel/otel": "2.1.2",
     "eve": "workspace:*",
