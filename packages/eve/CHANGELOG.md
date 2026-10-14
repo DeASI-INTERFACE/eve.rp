@@ -1,5 +1,15 @@
 # eve
 
+## 0.34.1
+
+### Patch Changes
+
+- 9a07754: Recognize repository-style Vercel link metadata during guided setup, so Vercel Connect integrations can continue after Vercel CLI links a repository-backed project.
+- 1cd563b: A model step that requests a tool approval (or question) and a subagent or remote-agent call in the same response no longer drops the approval. The harness now parks on both: the input request surfaces immediately, the delegation runs, and when its result arrives the turn re-parks on the still-pending approval instead of calling the model with a dangling tool call (`AI_MissingToolResultsError`).
+- 77eb819: Traced session and turn start events now carry portable trace context. Eval reporters can observe individual eval and traced-session starts, correlate completed results across every session trace, and read those contexts from artifacts and Braintrust metadata.
+- a19c743: The local trace viewer now reads user messages and runtime actions from durable channel delivery and action spans, avoiding duplicate SDK tool details in `eve traces` output.
+- 23c7354: Organize the internal harness instrumentation modules under a dedicated directory without changing runtime behavior.
+
 ## 0.34.0
 
 ### Minor Changes
